@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B4750">
+  <meta name="description" content="Personalised physiotherapy and rehabilitation in Barsha Heights, Dubai. Explore expert-led treatment and book an appointment at Vitruvian Italian Physiotherapy Center.">
+  <title>Vitruvian Physiotherapy | Expert Physiotherapy in Dubai</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B4750;
+      --primary-dark: #07363D;
+      --primary-light: #DDE9E7;
+      --secondary: #D8C7AA;
+      --secondary-dark: #A58C68;
+      --secondary-light: #F1EBDD;
+      --accent: #98583F;
+      --heading: #172A2B;
+      --body: #405253;
+      --muted: #647475;
+      --background: #F8F7F2;
+      --background-alt: #EEF2EF;
+      --surface: #FFFFFF;
+      --border: #D8E1DD;
+      --font-heading: "Newsreader", Georgia, serif;
+      --font-body: "Plus Jakarta Sans", Arial, sans-serif;
+      --container: 1180px;
+      --radius: 8px;
+      --shadow: 0 18px 50px rgba(7, 54, 61, .09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--body);
+      background: var(--background);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--secondary-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1, h2, h3, h4 {
+      color: var(--heading);
+      font-family: var(--font-heading);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    h1 { font-size: clamp(3rem, 6.5vw, 5.1rem); }
+    h2 { font-size: clamp(2.5rem, 4.5vw, 3.65rem); }
+    h3 { font-size: clamp(1.65rem, 2.5vw, 2.1rem); }
+    p { color: var(--body); }
+
+    .section { padding: 112px 0; }
+    .section-heading { max-width: 690px; margin-bottom: 48px; }
+    .section-heading h2 { margin: 18px 0; }
+    .section-heading p { max-width: 590px; margin-bottom: 0; color: var(--muted); }
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .text-link span { transition: transform .2s ease; }
+    .text-link:hover span { transform: translateX(5px); }
+
+    .btn {
+      min-height: 54px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 23px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 800;
+      transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-light { background: var(--surface); color: var(--primary); }
+    .btn-light:hover { background: var(--secondary-light); }
+    .btn-outline { border-color: rgba(11,71,80,.3); color: var(--primary); background: transparent; }
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+    .btn-arrow { font-size: 19px; line-height: 1; }
+
+    /* Announcement and navigation */
+    .topbar {
+      padding: 9px 0;
+      color: rgba(255,255,255,.85);
+      background: var(--primary-dark);
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 20px; }
+    .topbar a { color: #fff; font-weight: 700; }
+
+    .header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      background: rgba(248,247,242,.96);
+      border-bottom: 1px solid rgba(216,225,221,.8);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 210px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--secondary-dark);
+      border-radius: 50%;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 25px;
+    }
+    .brand-name {
+      color: var(--primary-dark);
+      font-family: var(--font-heading);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .brand-name small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links a {
+      color: var(--heading);
+      font-size: 12px;
+      font-weight: 700;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .nav-actions .btn { min-height: 46px; padding: 11px 17px; font-size: 12px; }
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--primary);
+      border-radius: 4px;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 86px;
+      background:
+        radial-gradient(circle at 6% 12%, rgba(216,199,170,.25), transparent 27%),
+        linear-gradient(115deg, #F8F7F2 0%, #F4F3EC 57%, #E8EFEB 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -260px;
+      width: 560px;
+      height: 560px;
+      border: 1px solid rgba(11,71,80,.09);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: 62px;
+    }
+    .hero-copy { max-width: 620px; }
+    .hero-copy h1 { margin: 22px 0 22px; }
+    .hero-copy h1 em { color: var(--primary); font-weight: 400; }
+    .hero-copy > p { max-width: 530px; color: var(--muted); font-size: 17px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 31px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hero-note strong { color: var(--primary); }
+    .hero-note-mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--secondary-dark);
+      border-radius: 50%;
+      color: var(--secondary-dark);
+      font-size: 16px;
+    }
+    .hero-visual { position: relative; min-height: 510px; }
+    .hero-image-wrap {
+      position: absolute;
+      inset: 0 24px 28px 30px;
+      overflow: hidden;
+      background: #D9E3DF;
+      border-radius: 48% 48% 5px 5px;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(7,54,61,.22));
+    }
+    .hero-orbit {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      width: 145px;
+      height: 145px;
+      border: 1px solid var(--secondary-dark);
+      border-radius: 50%;
+      opacity: .8;
+    }
+    .hero-orbit::before, .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(165,140,104,.65);
+      border-radius: 50%;
+    }
+    .hero-orbit::after { inset: 38px; }
+    .hero-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(270px, 70%);
+      padding: 22px 24px;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .hero-caption strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .hero-caption span { color: rgba(255,255,255,.78); font-size: 11px; }
+
+    /* Trust strip */
+    .trust-strip { background: var(--surface); border-bottom: 1px solid var(--border); }
+    .trust-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 96px;
+      padding: 16px;
+      border-right: 1px solid var(--border);
+    }
+    .trust-item:last-child { border-right: 0; }
+    .trust-symbol {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 17px;
+    }
+    .trust-item strong { display: block; color: var(--heading); font-size: 12px; }
+    .trust-item span:last-child { display: block; color: var(--muted); font-size: 10px; }
+
+    /* Intro */
+    .intro-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; align-items: start; }
+    .intro-aside { position: relative; padding: 30px; background: var(--primary); color: #fff; }
+    .intro-aside::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      width: 65px;
+      height: 65px;
+      border-top: 1px solid var(--secondary-dark);
+      border-left: 1px solid var(--secondary-dark);
+    }
+    .intro-aside .eyebrow { color: var(--secondary); }
+    .intro-aside h3 { margin: 19px 0 13px; color: #fff; font-size: 31px; }
+    .intro-aside p { margin-bottom: 0; color: rgba(255,255,255,.75); font-size: 13px; }
+    .intro-content h2 { margin: 17px 0 22px; }
+    .intro-content p { color: var(--muted); }
+    .intro-content .text-link { margin-top: 12px; }
+
+    /* Treatment pathways */
+    .pathways { background: var(--background-alt); }
+    .pathways-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+    .pathways-head .section-heading { margin-bottom: 0; }
+    .pathway-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .pathway-card {
+      position: relative;
+      min-height: 360px;
+      padding: 32px 28px;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .pathway-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .pathway-number {
+      color: var(--secondary-dark);
+      font-family: var(--font-heading);
+      font-size: 18px;
+    }
+    .pathway-card h3 { margin: 42px 0 14px; }
+    .pathway-card p { min-height: 74px; color: var(--muted); font-size: 13px; }
+    .pathway-card .text-link { margin-top: 20px; }
+    .pathway-watermark {
+      position: absolute;
+      right: -22px;
+      top: 35px;
+      width: 125px;
+      height: 125px;
+      border: 1px solid rgba(11,71,80,.08);
+      border-radius: 50%;
+    }
+    .pathway-watermark::before, .pathway-watermark::after {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(11,71,80,.08);
+      border-radius: 50%;
+    }
+    .pathway-watermark::after { inset: 33px; }
+    .pathway-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 25px;
+      padding: 20px 24px;
+      background: var(--primary-light);
+    }
+    .pathway-footer p { margin: 0; color: var(--primary-dark); font-size: 13px; font-weight: 600; }
+
+    /* Six custom service illustrations: exactly two rows of three */
+    .services { background: var(--background); }
+    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+    .service-item {
+      min-height: 250px;
+      padding: 30px;
+      background: transparent;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background .2s ease;
+    }
+    .service-item:hover { background: var(--surface); }
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 23px;
+      color: var(--primary);
+    }
+    .service-icon svg { width: 48px; height: 48px; }
+    .service-item h3 { margin-bottom: 10px; font-size: 25px; }
+    .service-item p { margin-bottom: 0; color: var(--muted); font-size: 12px; }
+
+    /* Method */
+    .method { background: var(--primary-dark); color: #fff; }
+    .method-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: center; }
+    .method .eyebrow { color: var(--secondary); }
+    .method h2 { margin: 18px 0; color: #fff; }
+    .method-copy > p { color: rgba(255,255,255,.72); }
+    .method-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+    .method-step { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.2); }
+    .method-step span { color: var(--secondary); font-family: var(--font-heading); font-size: 17px; }
+    .method-step h3 { margin: 10px 0 8px; color: #fff; font-size: 25px; }
+    .method-step p { margin: 0; color: rgba(255,255,255,.66); font-size: 12px; }
+
+    /* Conditions */
+    .conditions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .conditions-image {
+      position: relative;
+      min-height: 490px;
+      overflow: hidden;
+      background: #DDE9E7;
+    }
+    .conditions-image img { width: 100%; height: 490px; object-fit: cover; }
+    .conditions-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(7,54,61,.25), transparent 55%);
+    }
+    .conditions-copy h2 { margin: 18px 0 18px; }
+    .conditions-copy > p { color: var(--muted); }
+    .condition-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .condition-list li { padding: 13px 0; border-bottom: 1px solid var(--border); color: var(--heading); font-size: 12px; font-weight: 700; }
+    .condition-list li::before { content: "↗"; margin-right: 9px; color: var(--secondary-dark); }
+
+    /* Team */
+    .team { background: var(--secondary-light); }
+    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .team-card { background: var(--surface); }
+    .team-photo { height: 235px; overflow: hidden; background: #DDE5E1; }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .team-card:hover .team-photo img { transform: scale(1.04); }
+    .team-info { padding: 21px 19px 24px; }
+    .team-info h3 { margin-bottom: 7px; font-size: 24px; }
+    .team-info p { margin: 0; color: var(--muted); font-size: 11px; }
+
+    /* Brand story */
+    .brand-story { padding: 95px 0; background: var(--surface); }
+    .brand-story-inner {
+      display: grid;
+      grid-template-columns: .55fr 1.45fr;
+      align-items: center;
+      gap: 70px;
+    }
+    .brand-symbol {
+      width: 210px;
+      height: 210px;
+      display: grid;
+      place-items: center;
+      margin: auto;
+      border: 1px solid var(--secondary-dark);
+      border-radius: 50%;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 88px;
+    }
+    .brand-story h2 { margin: 16px 0; }
+    .brand-story p { max-width: 690px; color: var(--muted); }
+
+    /* CTA */
+    .booking-cta { padding: 95px 0; background: var(--primary); }
+    .booking-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+    .booking-inner .eyebrow { color: var(--secondary); }
+    .booking-inner h2 { max-width: 670px; margin: 16px 0 10px; color: #fff; }
+    .booking-inner p { margin: 0; color: rgba(255,255,255,.72); }
+    .booking-inner .btn { flex: 0 0 auto; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 70px; }
+    .contact-copy h2 { margin: 18px 0; }
+    .contact-copy > p { color: var(--muted); }
+    .contact-details { margin-top: 30px; }
+    .contact-line { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--border); }
+    .contact-line-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 15px;
+    }
+    .contact-line strong { display: block; color: var(--heading); font-size: 12px; }
+    .contact-line a, .contact-line span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .contact-panel { padding: 36px; background: var(--background-alt); }
+    .contact-panel h3 { margin-bottom: 10px; }
+    .contact-panel > p { color: var(--muted); font-size: 12px; }
+    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+    .form-field { display: flex; flex-direction: column; gap: 7px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: var(--heading); font-size: 11px; font-weight: 800; }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 13px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      outline: none;
+      background: #fff;
+      color: var(--heading);
+      font: 13px var(--font-body);
+    }
+    .form-field textarea { min-height: 105px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(11,71,80,.09);
+    }
+    .form-note { grid-column: 1 / -1; color: var(--muted); font-size: 10px; }
+    .form-message { grid-column: 1 / -1; margin: 0; color: var(--primary); font-size: 12px; font-weight: 700; }
+
+    /* Footer */
+    .footer { padding: 65px 0 25px; background: #062E34; color: rgba(255,255,255,.72); }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: 45px; padding-bottom: 45px; }
+    .footer .brand-name { color: #fff; }
+    .footer .brand-name small { color: rgba(255,255,255,.55); }
+    .footer .brand-mark { color: var(--secondary); border-color: var(--secondary-dark); }
+    .footer-intro p { max-width: 290px; margin-top: 20px; color: rgba(255,255,255,.6); font-size: 11px; }
+    .footer h4 { margin-bottom: 18px; color: #fff; font-family: var(--font-body); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .footer-links { display: grid; gap: 11px; }
+    .footer-links a, .footer-links span { color: rgba(255,255,255,.65); font-size: 11px; }
+    .footer-links a:hover { color: var(--secondary); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.45);
+      font-size: 10px;
+    }
+
+    /* Fixed mobile appointment actions */
+    .mobile-cta { display: none; }
+
+    @media (max-width: 1050px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 11px; }
+      .nav-actions .btn { padding-inline: 12px; }
+      .hero-grid { gap: 35px; }
+      .team-grid { grid-template-columns: repeat(2,1fr); }
+      .team-photo { height: 280px; }
+      .footer-grid { gap: 25px; }
+    }
+
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, 620px); }
+      .section { padding: 78px 0; }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .topbar-inner span:first-child { display: none; }
+      .nav { min-height: 72px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-actions { margin-left: auto; }
+      .nav-actions .btn { min-height: 42px; }
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 24px 20px;
+        background: var(--background);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+      .hero { padding: 56px 0 65px; }
+      .hero-grid, .intro-grid, .method-grid, .conditions-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
+      .hero-visual { min-height: 440px; }
+      .hero-image-wrap { inset: 0 20px 25px 12px; }
+      .hero-copy > p { font-size: 15px; }
+      .trust-item { flex-direction: column; text-align: center; gap: 8px; }
+      .pathways-head { display: block; }
+      .pathways-head > .btn { margin-top: 22px; }
+      .pathway-grid { grid-template-columns: 1fr; }
+      .pathway-card { min-height: 290px; }
+      .pathway-card h3 { margin-top: 30px; }
+      .pathway-card p { min-height: auto; }
+      .pathway-footer { align-items: flex-start; flex-direction: column; }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .service-item { min-height: 235px; padding: 22px; }
+      .method-steps { gap: 0 18px; }
+      .conditions-image, .conditions-image img { min-height: 350px; height: 350px; }
+      .brand-story-inner { grid-template-columns: 1fr; gap: 35px; text-align: center; }
+      .brand-symbol { width: 150px; height: 150px; font-size: 65px; }
+      .booking-inner { align-items: flex-start; flex-direction: column; }
+      .contact-panel { padding: 25px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      body { padding-bottom: 70px; }
+      .container { width: calc(100% - 34px); }
+      h1 { font-size: clamp(2.65rem, 12vw, 3.6rem); }
+      h2 { font-size: clamp(2.35rem, 10vw, 3rem); }
+      .brand { min-width: 0; gap: 8px; }
+      .brand-mark { width: 36px; height: 36px; font-size: 21px; }
+      .brand-name { font-size: 17px; }
+      .brand-name small { font-size: 8px; }
+      .nav-actions .btn { display: none; }
+      .hero { padding-top: 43px; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .hero-visual { min-height: 350px; }
+      .hero-caption { width: 220px; padding: 17px; }
+      .hero-caption strong { font-size: 21px; }
+      .trust-item { min-height: 115px; padding: 12px 5px; }
+      .trust-item strong { font-size: 10px; }
+      .trust-item span:last-child { font-size: 9px; }
+      .intro-aside { padding: 25px; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .service-item { min-height: 250px; padding: 18px 14px; }
+      .service-item h3 { font-size: 21px; }
+      .service-item p { font-size: 11px; }
+      .service-icon { margin-bottom: 15px; }
+      .service-icon svg { width: 42px; height: 42px; }
+      .method-steps { grid-template-columns: 1fr; }
+      .condition-list { gap: 0 12px; }
+      .condition-list li { font-size: 11px; }
+      .team-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .team-photo { height: 190px; }
+      .team-info { padding: 15px 12px 18px; }
+      .team-info h3 { font-size: 20px; }
+      .team-info p { font-size: 10px; }
+      .contact-form { grid-template-columns: 1fr; }
+      .form-field.full, .form-note, .form-message { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 18px; }
+      .footer-bottom { flex-direction: column; }
+      .mobile-cta {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255,255,255,.97);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -8px 24px rgba(7,54,61,.1);
+      }
+      .mobile-cta .btn { min-height: 48px; padding: 10px; font-size: 11px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Italian-inspired physiotherapy and rehabilitation in Dubai</span>
+      <span>Barsha Heights, Dubai &nbsp;·&nbsp; <a href="tel:+97143944118">+971 4 394 4118</a></span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Vitruvian Physiotherapy home">
+        <span class="brand-mark">V</span>
+        <span class="brand-name">Vitruvian<small>Italian Physiotherapy Center</small></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#conditions">Conditions</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Book an Appointment <span class="btn-arrow">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Physiotherapy in Barsha Heights, Dubai</span>
+          <h1>Move with less pain. <em>Live with more freedom.</em></h1>
+          <p>Personalised physiotherapy and rehabilitation built around your body, your goals and the way you want to move. Meet the team at Vitruvian Italian Physiotherapy Center.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Book Your Assessment <span class="btn-arrow">↗</span></a>
+            <a class="btn btn-outline" href="#treatments">Explore Treatments <span class="btn-arrow">→</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="hero-note-mark">✳</span>
+            <span><strong>Care shaped around you</strong><br>Assessment, treatment and guided progress.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <div class="hero-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&q=85"
+              alt="Healthcare professional supporting a patient during a clinical consultation"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(145deg,#DDE9E7,#A9BBB6)'"
+            >
+          </div>
+          <div class="hero-caption">
+            <strong>Understand your movement.</strong>
+            <span>Build a considered path towards better function.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Clinic information">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-symbol">⌖</span>
+          <div><strong>Barsha Heights, Dubai</strong><span>Al Ameri Tower, 3rd Floor</span></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-symbol">◷</span>
+          <div><strong>Monday to Saturday</strong><span>Appointments available during clinic hours</span></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-symbol">↗</span>
+          <div><strong>Book Your Visit</strong><span>Choose an appointment online</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container intro-grid">
+        <aside class="intro-aside">
+          <span class="eyebrow">The Vitruvian philosophy</span>
+          <h3>Care that sees the whole person.</h3>
+          <p>Movement is individual. Your treatment should be too. We bring together hands-on care, rehabilitation and modern therapeutic techniques to support your physical wellbeing.</p>
+        </aside>
+
+        <div class="intro-content">
+          <span class="eyebrow">A more considered approach to physiotherapy</span>
+          <h2>Your body has its own story. Your care should reflect it.</h2>
+          <p>At Vitruvian Italian Physiotherapy Center, the focus is on understanding how your body moves, what is limiting you and what you want to return to doing. Treatment is selected around your needs rather than a one-size-fits-all routine.</p>
+          <p>With Italian roots and a movement-focused philosophy, the clinic combines manual treatment approaches, exercise-based rehabilitation and therapeutic technologies to help patients work towards meaningful improvements in everyday function.</p>
+          <a class="text-link" href="#approach">Discover our approach <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pathways" id="treatments">
+      <div class="container">
+        <div class="pathways-head">
+          <div class="section-heading">
+            <span class="eyebrow">Find the right starting point</span>
+            <h2>Care pathways shaped around how you move.</h2>
+            <p>Start with the area of care that best reflects your needs. Your physiotherapist can help determine the most appropriate treatment after an assessment.</p>
+          </div>
+          <a class="btn btn-outline" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Book an Assessment <span class="btn-arrow">↗</span></a>
+        </div>
+
+        <div class="pathway-grid">
+          <article class="pathway-card">
+            <span class="pathway-number">01 / Restore</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Everyday Pain & Recovery</h3>
+            <p>For people managing discomfort, restricted movement or recovery needs that affect daily activities.</p>
+            <a class="text-link" href="#conditions">Explore common conditions <span>→</span></a>
+          </article>
+
+          <article class="pathway-card">
+            <span class="pathway-number">02 / Rebuild</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Sports Rehabilitation</h3>
+            <p>Structured support for injury rehabilitation, strength, movement confidence and a considered return to sport.</p>
+            <a class="text-link" href="#sports-rehab">Explore sports rehabilitation <span>→</span></a>
+          </article>
+
+          <article class="pathway-card">
+            <span class="pathway-number">03 / Improve</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Movement & Wellbeing</h3>
+            <p>Hands-on and exercise-based approaches to mobility, posture, physical function and ongoing wellbeing.</p>
+            <a class="text-link" href="#treatment-options">Explore treatment options <span>→</span></a>
+          </article>
+        </div>
+
+        <div class="pathway-footer">
+          <p>Not sure which pathway is right for you? Start with an assessment and discuss your concerns with the team.</p>
+          <a class="text-link" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Arrange a visit <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="treatment-options">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Treatment options</span>
+          <h2>Different techniques. One individual plan.</h2>
+          <p>Your physiotherapist can recommend suitable techniques based on your assessment, symptoms and goals. Treatment options available at the clinic include:</p>
+        </div>
+
+        <!-- Exactly six custom SVG icons, displayed in two rows of three. -->
+        <div class="service-grid">
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 34c5-2 8-7 9-13l2-8c.5-2 3-2 3 1l-1 8 7-6c2-2 4 0 2 2l-7 8 8-3c2-1 3 2 1 3l-9 5c-4 3-8 5-15 5"/>
+                <path d="M8 39h31"/>
+              </svg>
+            </div>
+            <h3>Manual Therapy</h3>
+            <p>Hands-on techniques including joint manipulation, soft-tissue approaches and other manual treatments.</p>
+          </article>
+
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="24" cy="8" r="3"/>
+                <path d="M24 12v11m0-6-9 6m9-6 9 6m-9 0-7 13m7-13 7 13M13 25l-4 9m26-9 4 9"/>
+                <path d="M17 39h14"/>
+              </svg>
+            </div>
+            <h3>Exercise Therapy</h3>
+            <p>Guided movement and strengthening exercises to support mobility, control and functional goals.</p>
+          </article>
+
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8 24h7l4-10 7 20 5-13 3 3h6"/>
+                <path d="M24 5v5m0 28v5M5 24h5m28 0h5"/>
+                <circle cx="24" cy="24" r="19"/>
+              </svg>
+            </div>
+            <h3>TECAR Therapy</h3>
+            <p>A therapeutic energy-based modality offered as part of selected physiotherapy treatment plans.</p>
+          </article>
+
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 12c8 0 8 24 16 24s8-24 14-24"/>
+                <path d="M9 24h7l3-5 5 11 4-7 3 3h8"/>
+                <circle cx="24" cy="24" r="20"/>
+              </svg>
+            </div>
+            <h3>Shockwave Therapy</h3>
+            <p>A treatment modality that may be considered for selected musculoskeletal conditions.</p>
+          </article>
+
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M24 5v38M8 24h32M12 12l24 24M36 12 12 36"/>
+                <circle cx="24" cy="24" r="17"/>
+                <circle cx="24" cy="24" r="5"/>
+              </svg>
+            </div>
+            <h3>Dry Needling</h3>
+            <p>A targeted technique that may be used by a qualified practitioner where clinically appropriate.</p>
+          </article>
+
+          <article class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M24 6c-6 8-13 14-13 23a13 13 0 0 0 26 0c0-9-7-15-13-23Z"/>
+                <path d="M17 29c1 5 4 7 8 8"/>
+                <path d="M24 16v6m-3-3h6"/>
+              </svg>
+            </div>
+            <h3>Specialist Care</h3>
+            <p>Options including lymphatic drainage, postural education, kinesiotaping and other specialised services.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="approach">
+      <div class="container method-grid">
+        <div class="method-copy">
+          <span class="eyebrow">The Vitruvian approach</span>
+          <h2>Good care begins with understanding.</h2>
+          <p>Rather than treating every patient the same way, the focus is on understanding your concerns and selecting a suitable course of care. Your physiotherapist can explain the options and guide you through each stage.</p>
+          <a class="btn btn-light" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Start with an Assessment <span class="btn-arrow">↗</span></a>
+        </div>
+
+        <div class="method-steps">
+          <article class="method-step">
+            <span>01 / Understand</span>
+            <h3>Listen & Assess</h3>
+            <p>Discuss your symptoms, movement concerns, history and personal goals.</p>
+          </article>
+          <article class="method-step">
+            <span>02 / Plan</span>
+            <h3>Set a Direction</h3>
+            <p>Identify suitable treatment options and agree on an individual plan.</p>
+          </article>
+          <article class="method-step">
+            <span>03 / Treat</span>
+            <h3>Work Together</h3>
+            <p>Use appropriate hands-on care, therapeutic techniques and guided exercises.</p>
+          </article>
+          <article class="method-step">
+            <span>04 / Progress</span>
+            <h3>Review & Adapt</h3>
+            <p>Review your response to treatment and adjust the approach as needed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="conditions">
+      <div class="container conditions-grid">
+        <div class="conditions-image">
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=85"
+            alt="Person performing a guided physical exercise"
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(145deg,#DDE9E7,#A9BBB6)'"
+          >
+        </div>
+        <div class="conditions-copy">
+          <span class="eyebrow">What brings you here?</span>
+          <h2>Support for the movements that matter.</h2>
+          <p>Whether discomfort is affecting work, exercise or everyday life, the first step is understanding what may be contributing to it. The clinic's website highlights care for a range of musculoskeletal concerns, including:</p>
+          <ul class="condition-list">
+            <li>Lower back pain</li>
+            <li>Shoulder pain</li>
+            <li>Sciatica</li>
+            <li>Tennis elbow</li>
+            <li>Achilles tendinitis</li>
+            <li>ACL injury</li>
+          </ul>
+          <a class="btn btn-primary" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Discuss Your Concern <span class="btn-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pathways" id="sports-rehab">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Sports rehabilitation</span>
+          <h2>Build towards your next move.</h2>
+          <p>Rehabilitation is about more than returning to activity. It is about understanding your movement, rebuilding capacity and progressing with guidance.</p>
+        </div>
+        <div class="pathway-grid">
+          <article class="pathway-card">
+            <span class="pathway-number">01 / Assess</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Biomechanical Analysis</h3>
+            <p>Explore movement patterns and physical factors relevant to your activity and rehabilitation goals.</p>
+          </article>
+          <article class="pathway-card">
+            <span class="pathway-number">02 / Strengthen</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Clinical Strengthening</h3>
+            <p>Progressive exercise therapy and strengthening as part of an individual rehabilitation plan.</p>
+          </article>
+          <article class="pathway-card">
+            <span class="pathway-number">03 / Return</span>
+            <span class="pathway-watermark" aria-hidden="true"></span>
+            <h3>Return to Play</h3>
+            <p>Work towards a considered return to sport with attention to function, readiness and injury prevention.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">The people behind your care</span>
+          <h2>Meet the physiotherapy team.</h2>
+          <p>Get to know the practitioners listed by Vitruvian Italian Physiotherapy Center and explore their professional backgrounds.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=650&q=80" alt="Portrait representing physiotherapist Omar Moustafa" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Omar Moustafa</h3>
+              <p>Physiotherapy qualifications listed by the clinic include Bachelor's and Master's degrees from the University of Eastern Piedmont, Italy.</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=650&q=80" alt="Portrait representing physiotherapist Andrea Ferrari" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Andrea Ferrari</h3>
+              <p>Physiotherapy degree information listed by the clinic includes studies at the European University of Valencia and Coventry University.</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=650&q=80" alt="Portrait representing physiotherapist Giulia De Rocchis" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Giulia De Rocchis</h3>
+              <p>Physiotherapy degree information listed by the clinic includes the University of Rome La Sapienza, Italy.</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=650&q=80" alt="Portrait representing physiotherapist Irina" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Irina</h3>
+              <p>Physiotherapy degree information listed by the clinic includes Alexandru Ioan Cuza University, Romania.</p>
+            </div>
+          </article>
+        </div>
+        <p style="margin:22px 0 0;color:var(--muted);font-size:11px;">Team photographs shown are illustrative placeholders. Replace with approved, current portraits of the clinic's practitioners before publishing.</p>
+      </div>
+    </section>
+
+    <section class="brand-story">
+      <div class="container brand-story-inner">
+        <div class="brand-symbol" aria-hidden="true">V</div>
+        <div>
+          <span class="eyebrow">Inspired by balance and proportion</span>
+          <h2>The human body at the centre of everything.</h2>
+          <p>The Vitruvian identity draws inspiration from the relationship between the human body, movement and proportion. That idea informs the clinic's Italian roots and its focus on understanding each person's physical needs as part of a wider picture of wellbeing.</p>
+          <a class="text-link" href="https://vitruvianphysiocenter.com/about-us/" target="_blank" rel="noopener">Learn more about Vitruvian <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-cta">
+      <div class="container booking-inner">
+        <div>
+          <span class="eyebrow">Your next step starts here</span>
+          <h2>Make time for the way you want to move.</h2>
+          <p>Arrange an appointment with Vitruvian Italian Physiotherapy Center in Barsha Heights.</p>
+        </div>
+        <a class="btn btn-light" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Book an Appointment <span class="btn-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Visit Vitruvian</span>
+          <h2>Let's talk about your next step.</h2>
+          <p>Contact the clinic to discuss appointments, location and general enquiries. For treatment advice, arrange an assessment with the physiotherapy team.</p>
+
+          <div class="contact-details">
+            <div class="contact-line">
+              <span class="contact-line-mark">⌖</span>
+              <div><strong>Clinic address</strong><span>Al Ameri Tower, Al Tabee'a 1 Street, 3rd Floor, Unit 301, Barsha Heights - Tecom, Dubai, UAE</span></div>
+            </div>
+            <div class="contact-line">
+              <span class="contact-line-mark">☎</span>
+              <div><strong>Phone</strong><a href="tel:+97143944118">+971 4 394 4118</a></div>
+            </div>
+            <div class="contact-line">
+              <span class="contact-line-mark">✉</span>
+              <div><strong>Email</strong><a href="mailto:info@vitruvianphysiocenter.com">info@vitruvianphysiocenter.com</a></div>
+            </div>
+            <div class="contact-line">
+              <span class="contact-line-mark">◷</span>
+              <div><strong>Opening hours</strong><span>Monday–Friday: 8:00 AM–7:00 PM<br>Saturday: 8:00 AM–6:00 PM<br>Sunday: Closed</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Request an appointment</h3>
+          <p>Share your contact details and the clinic can follow up with you. For a confirmed booking, use the online appointment system.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-field">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" required>
+            </div>
+            <div class="form-field full">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required>
+            </div>
+            <div class="form-field full">
+              <label for="interest">What would you like help with?</label>
+              <select id="interest" name="interest">
+                <option value="">Choose an area (optional)</option>
+                <option>General physiotherapy</option>
+                <option>Sports rehabilitation</option>
+                <option>Back or neck pain</option>
+                <option>Shoulder or joint pain</option>
+                <option>Other enquiry</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Briefly tell us how we can help"></textarea>
+            </div>
+            <p class="form-note">This demonstration form does not submit patient information. Connect it to the clinic's approved, privacy-compliant form system before publishing.</p>
+            <button class="btn btn-primary form-field full" type="submit">Send Enquiry <span class="btn-arrow">→</span></button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-intro">
+          <a class="brand" href="#home">
+            <span class="brand-mark">V</span>
+            <span class="brand-name">Vitruvian<small>Italian Physiotherapy Center</small></span>
+          </a>
+          <p>Personalised physiotherapy and rehabilitation in Barsha Heights, Dubai. Care centred on movement, function and individual goals.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="#about">About Vitruvian</a>
+            <a href="#treatments">Treatments</a>
+            <a href="#conditions">Conditions</a>
+            <a href="#sports-rehab">Sports Rehabilitation</a>
+            <a href="#team">Our Team</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="tel:+97143944118">+971 4 394 4118</a>
+            <a href="https://wa.me/971509739576" target="_blank" rel="noopener">WhatsApp the clinic</a>
+            <a href="mailto:info@vitruvianphysiocenter.com">Email the clinic</a>
+            <a href="https://maps.google.com/?q=Al+Ameri+Tower+Barsha+Heights+Dubai" target="_blank" rel="noopener">Find the clinic</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Opening hours</h4>
+          <div class="footer-links">
+            <span>Monday–Friday: 8 AM–7 PM</span>
+            <span>Saturday: 8 AM–6 PM</span>
+            <span>Sunday: Closed</span>
+            <a href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Online appointments ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> Vitruvian Italian Physiotherapy Center. All rights reserved.</span>
+        <span>Designed around the science of movement.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Quick appointment actions">
+    <a class="btn btn-outline" href="https://wa.me/971509739576" target="_blank" rel="noopener">WhatsApp Us</a>
+    <a class="btn btn-primary" href="https://vitruvian-italian-physiotherapy-center.eu1.cliniko.com/bookings" target="_blank" rel="noopener">Book Now ↗</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("formMessage").textContent =
+        "This is a front-end demo. Connect the form to the clinic's approved enquiry system before accepting submissions.";
+    });
+  </script>
+</body>
+</html>
